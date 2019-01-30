@@ -9,14 +9,13 @@ namespace ExercicioResolvido1
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter the number of products: ");
+            Console.Write("Enter the number of employees: ");
             int n = int.Parse(Console.ReadLine());
             List<Employee> employees = new List<Employee>();
 
             for (int i = 1; i <= n; i++)
             {
                 Console.WriteLine($"Employee #{i} data: ");
-                Console.WriteLine();
                 Console.Write("Outsourced (y/n)? ");
                 char op = char.Parse(Console.ReadLine());
 
@@ -32,7 +31,7 @@ namespace ExercicioResolvido1
                     double addCharge = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
                     Employee employee = new OutsourceEmployee(name, hours, valuePerHour, addCharge);
-                    employee.Payment();
+                    
 
                     employees.Add(employee);
                     
@@ -45,7 +44,7 @@ namespace ExercicioResolvido1
                     double valuePerHour = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
                     Employee employee = new Employee(name, hours, valuePerHour);
-                    employee.Payment();
+                    
                     employees.Add(employee);
                 } else{
 
@@ -56,9 +55,11 @@ namespace ExercicioResolvido1
             }
 
             Console.WriteLine("PAYMENTS");
+            double pagamaneto = 0.0;
             foreach (Employee employee in employees)
             {
-                Console.WriteLine(employee.Name+ " - $"+employee.ValuePerHour);
+                pagamaneto = employee.Payment();
+                Console.WriteLine(employee.Name+ " - $"+pagamaneto);
             }
         }
     }
