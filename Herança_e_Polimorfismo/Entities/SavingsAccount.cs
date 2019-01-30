@@ -23,5 +23,6 @@ namespace Herança_e_Polimorfismo.Entities
         {
             Balance += Balance * InterestRate;
         }
+        
     }
 }
