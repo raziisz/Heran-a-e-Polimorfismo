@@ -7,13 +7,12 @@ namespace Herança_e_Polimorfismo
     {
         static void Main(string[] args)
         {
-            BusinessAcount account = new BusinessAcount(8010, "Bob BRown", 100.0, 500.00);
+            Account acc = new Account(1001, "Alex", 0.0);
+            BusinessAcount bacc = new BusinessAcount(1002, "Maria", 0.0, 500.00);
 
-            Console.WriteLine(account.Balance);
+            //UPCASTING
 
-            account.Deposit(500.00);
-
-            Console.WriteLine(account.Balance);
+            Account acc1 = bacc;
 
         }
     }
