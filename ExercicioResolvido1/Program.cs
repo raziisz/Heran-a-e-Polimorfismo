@@ -18,15 +18,16 @@ namespace ExercicioResolvido1
                 Console.WriteLine($"Employee #{i} data: ");
                 Console.Write("Outsourced (y/n)? ");
                 char op = char.Parse(Console.ReadLine());
+                Console.Write("Name: ");
+                string name = Console.ReadLine();
+                Console.Write("Hours: ");
+                int hours = int.Parse(Console.ReadLine());
+                Console.Write("Value per hour: ");
+                double valuePerHour = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
                 if (op == 'y' || op == 'Y')
                 {
-                    Console.Write("Name: ");
-                    string name = Console.ReadLine();
-                    Console.Write("Hours: ");
-                    int hours = int.Parse(Console.ReadLine());
-                    Console.Write("Value per hour: ");
-                    double valuePerHour = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                   
                     Console.Write("Additional charge: ");
                     double addCharge = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
@@ -36,12 +37,6 @@ namespace ExercicioResolvido1
                     employees.Add(employee);
                     
                 } else if(op == 'n' || op == 'N'){
-                    Console.Write("Name: ");
-                    string name = Console.ReadLine();
-                    Console.Write("Hours: ");
-                    int hours = int.Parse(Console.ReadLine());
-                    Console.Write("Value per hour: ");
-                    double valuePerHour = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
                     Employee employee = new Employee(name, hours, valuePerHour);
                     
@@ -54,12 +49,13 @@ namespace ExercicioResolvido1
 
             }
 
+            Console.WriteLine();
             Console.WriteLine("PAYMENTS");
             double pagamaneto = 0.0;
             foreach (Employee employee in employees)
             {
                 pagamaneto = employee.Payment();
-                Console.WriteLine(employee.Name+ " - $"+pagamaneto);
+                Console.WriteLine(employee.Name+ " - $"+pagamaneto.ToString("F2",CultureInfo.InvariantCulture));
             }
         }
     }
