@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
 namespace Herança_e_Polimorfismo.Entities
 {
     class Account
     {
-        public int Number { get; set; }
-        public string Holder { get; set; }
-        public double Balance { get; set; }
+        public int Number { get; private set; }
+        public string Holder { get; private set; }
+        public double Balance { get; protected set; }
 
         public Account()
         {
