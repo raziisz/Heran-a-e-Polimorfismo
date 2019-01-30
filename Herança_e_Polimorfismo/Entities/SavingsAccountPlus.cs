@@ -5,6 +5,10 @@ using System.Text;
 namespace Herança_e_Polimorfismo.Entities
 {
     class SavingsAccountPlus : SavingsAccount
-    { 
+    {
+        public override void Withdra(double amount)
+        {
+
+        }
     }
 }
