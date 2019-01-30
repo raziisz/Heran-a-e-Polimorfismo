@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 
 namespace ExercicioPraFixacao.Entities
@@ -19,7 +20,7 @@ namespace ExercicioPraFixacao.Entities
 
         public override string PriceTag()
         {
-            return base.PriceTag()+"Customs fee: $ "+TotalPrice();
+            return Name+" $ "+TotalPrice().ToString("F2",CultureInfo.InvariantCulture)+" (Customs fee: $ "+CustomsFee.ToString("F2",CultureInfo.InvariantCulture)+")";
         }
 
         public double TotalPrice()
