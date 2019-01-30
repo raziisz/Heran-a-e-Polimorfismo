@@ -13,6 +13,8 @@ namespace Herança_e_Polimorfismo
             //UPCASTING
 
             Account acc1 = bacc;
+            Account acc2 = new BusinessAcount(1003, "Bob", 0.0, 200.0);
+            Account acc3 = new SavingsAccount(1004, "Ana", 0.0, 0.01);
 
         }
     }
