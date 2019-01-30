@@ -6,5 +6,12 @@ namespace ExercicioResolvido1.Entities
 {
     class OutsourceEmployee
     {
+        public double AdditionalCharge { get; set; }
+
+        public OutsourceEmployee()
+        {
+
+        }
+
     }
 }
