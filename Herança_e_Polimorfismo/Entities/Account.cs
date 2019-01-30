@@ -25,5 +25,9 @@ namespace Herança_e_Polimorfismo.Entities
         {
             Balance -= amount;
         }
+        public void Deposit(double amount)
+        {
+            Balance += amount;
+        }
     }
 }
