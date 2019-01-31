@@ -12,6 +12,11 @@ namespace MetodoAbstrato.Entities
         {
         }
 
+        protected Shape(Color color)
+        {
+            Color = color;
+        }
+
         public abstract double Area();
         
     }
