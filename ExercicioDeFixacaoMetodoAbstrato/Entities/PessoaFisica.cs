@@ -24,7 +24,7 @@ namespace ExercicioDeFixacaoMetodoAbstrato.Entities
                 {
                     return RendaAnual * 0.15;
                 }
-            } else
+            } else //Se a renda atual for maior que 200000
             {
                 if(GastosSaude > 0.0)
                 {
