@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Herança_e_Polimorfismo.Entities;
 
 namespace Herança_e_Polimorfismo
@@ -7,14 +8,12 @@ namespace Herança_e_Polimorfismo
     {
         static void Main(string[] args)
         {
-            Account acc1 = new Account(1001, "Alex", 500.0);
-            Account acc2 = new SavingsAccount(1002, "Ana", 500.0, 0.01);
+            List<Account> list = new List<Account>();
 
-            acc1.Withdraw(10.0);
-            acc2.Withdraw(10.0);
-
-            Console.WriteLine(acc1.Balance);
-            Console.WriteLine(acc2.Balance);
+            list.Add(new SavingsAccount(1001, "Alex", 500.0, 0.01));
+            list.Add(new BusinessAcount(1002, "Maria", 500.0, 400.0));
+            list.Add(new SavingsAccount(1003, "Bob", 500.0, 0.001));
+            list.Add(new BusinessAcount(1004, "Anna", 500.0, 500.0));
 
         }
     }
