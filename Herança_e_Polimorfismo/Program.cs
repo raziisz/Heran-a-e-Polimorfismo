@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using Herança_e_Polimorfismo.Entities;
 
 namespace Herança_e_Polimorfismo
@@ -15,6 +16,26 @@ namespace Herança_e_Polimorfismo
             list.Add(new SavingsAccount(1003, "Bob", 500.0, 0.001));
             list.Add(new BusinessAcount(1004, "Anna", 500.0, 500.0));
 
+            double sum = 0.0;
+            foreach (Account acc in list)
+            {
+                sum += acc.Balance;
+            }
+
+            Console.WriteLine("Total balance all account: " + sum.ToString("F2", CultureInfo.InvariantCulture));
+
+            foreach (Account account in list)
+            {
+                account.Withdraw(10.0);
+            }
+
+            foreach (Account acc in list)
+            {
+                Console.WriteLine("Updated Balance for account "
+                    +acc.Number
+                    +": "
+                    +acc.Balance.ToString("F2",CultureInfo.InvariantCulture));
+            }
         }
     }
 }
