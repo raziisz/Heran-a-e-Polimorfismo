@@ -14,7 +14,7 @@ namespace ExercicioDeFixacaoMetodoAbstrato.Entities
 
         public override double Imposto()
         {
-            if(RendaAnual < 200000.00)
+            if(RendaAnual < 20000.00)
             {
                 if(GastosSaude > 0.0)
                 {
