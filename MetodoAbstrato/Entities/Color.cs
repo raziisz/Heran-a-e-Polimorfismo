@@ -8,6 +8,6 @@ namespace MetodoAbstrato.Entities
     {
         Black = 0,
         Blue = 1,
-        Red = 2;
+        Red = 2
     }
 }
